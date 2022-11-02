@@ -44,8 +44,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { createApp } from "vue";
 
-import "./style.css";
-import App from "./App.vue";
+import "@/style.css";
+import App from "@/App.vue";
 
 createApp(App).mount("#app");
 
@@ -224,79 +224,80 @@ export default {
 
 ```
 {
-	"private": true,
-	"name": "vite-project",
-	"version": "0.0.0",
-	"scripts": {
-		"build": "vite build",
-		"dev": "vite --host",
-		"format": "yarn run prettier && yarn run lint",
-		"format:packagejson": "npx prettier-package-json --tab-width 2 --write",
-		"lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src   --fix *.js --no-error-on-unmatched-pattern",
-		"prettier": "npx  prettier  --write src/*.?js src/*.html index.html --no-error-on-unmatched-pattern",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@originjs/vite-plugin-commonjs": "^1.0.3",
-		"@vue/eslint-config-prettier": "^7.0.0",
-		"axios": "^1.1.2",
-		"babel-eslint": "^10.1.0",
-		"bootstrap": "^5.2.2",
-		"buffer": "^6.0.3",
-		"datatables.net": "^1.11.4",
-		"datatables.net-buttons": "^2.2.2",
-		"datatables.net-buttons-dt": "^2.2.2",
-		"datatables.net-dt": "^1.11.4",
-		"datatables.net-rowgroup": "^1.2.0",
-		"datatables.net-select": "^1.4.0",
-		"eslint": "^8.25.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-vue": "^9.6.0",
-		"jquery": "^3.6.1",
-		"prettier": "^2.7.1",
-		"process": "^0.11.10",
-		"vite-plugin-html": "^3.2.0",
-		"vue": "^3.2.37"
-	},
-	"devDependencies": {
-		"@vitejs/plugin-vue": "^3.1.0",
-		"eslint-plugin-html": "^7.1.0",
-		"eslint-plugin-prettier": "^4.2.1",
-		"vite": "^3.1.0"
-	},
-	"compilerOptions": {
-		"target": "es2015",
-		"types": [
-			"vite/client"
-		]
-	},
-	"eslintConfig": {
-		"root": true,
-		"env": {
-			"node": true,
-			"commonjs": true,
-			"browser": true,
-			"es6": true
-		},
-		"parserOptions": {
-			"sourceType": "module"
-		},
-		"plugins": [
-			"vue",
-			"html",
-			"prettier"
-		],
-		"rules": {
-			"no-unused-vars": "off"
-		},
-		"extends": [
-			"plugin:vue/vue3-essential",
-			"eslint:recommended",
-			"@vue/prettier"
-		]
-	}
+    "private": true,
+    "name": "vite-project",
+    "version": "0.0.0",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite --host",
+        "devlocal": "vite",
+        "format": "yarn run prettier && yarn run lint",
+        "format:packagejson": "npx prettier-package-json --tab-width 2 --write",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src   --fix *.js --no-error-on-unmatched-pattern",
+        "prettier": "npx  prettier  --write src/*.?js src/*.html index.html --no-error-on-unmatched-pattern",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@babel/core": "^7.19.6",
+        "@babel/eslint-parser": "^7.19.1",
+        "@originjs/vite-plugin-commonjs": "^1.0.3",
+        "@popperjs/core": "^2.11.6",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "axios": "^1.1.2",
+        "bootstrap": "^5.2.2",
+        "buffer": "^6.0.3",
+        "datatables.net": "^1.11.4",
+        "datatables.net-buttons": "^2.2.2",
+        "datatables.net-dt": "^1.11.4",
+        "datatables.net-rowgroup": "^1.2.0",
+        "datatables.net-select": "^1.4.0",
+        "eslint": "^8.25.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-vue": "^9.6.0",
+        "jquery": "^3.6.1",
+        "prettier": "^2.7.1",
+        "process": "^0.11.10",
+        "vite-plugin-html": "^3.2.0",
+        "vue": "^3.2.37"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.1.0",
+        "eslint-plugin-html": "^7.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "vite": "^3.1.0"
+    },
+    "compilerOptions": {
+        "target": "es2015",
+        "types": [
+            "vite/client"
+        ]
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true,
+            "commonjs": true,
+            "browser": true,
+            "es6": true
+        },
+        "parserOptions": {
+            "sourceType": "module"
+        },
+        "plugins": [
+            "vue",
+            "html",
+            "prettier"
+        ],
+        "rules": {
+            "no-unused-vars": "off"
+        },
+        "extends": [
+            "plugin:vue/vue3-essential",
+            "eslint:recommended",
+            "@vue/prettier"
+        ]
+    }
 }
-
 ```
 `index.html`
 ```
